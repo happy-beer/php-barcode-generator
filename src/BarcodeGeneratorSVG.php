@@ -1,6 +1,6 @@
 <?php
 
-namespace Picqer\Barcode;
+namespace Happybeer\Barcode;
 
 class BarcodeGeneratorSVG extends BarcodeGenerator
 {
@@ -9,16 +9,15 @@ class BarcodeGeneratorSVG extends BarcodeGenerator
      * Return a SVG string representation of barcode.
      *
      * @param $code (string) code to print
-     * @param $type (const) type of barcode
      * @param $widthFactor (int) Minimum width of a single bar in user units.
      * @param $totalHeight (int) Height of barcode in user units.
      * @param $color (string) Foreground color (in SVG format) for bar elements (background is transparent).
      * @return string SVG code.
      * @public
      */
-    public function getBarcode($code, $type, $widthFactor = 2, $totalHeight = 30, $color = 'black')
+    public function getBarcode($code, $widthFactor = 2, $totalHeight = 30, $color = 'black')
     {
-        $barcodeData = $this->getBarcodeData($code, $type);
+        $barcodeData = $this->getBarcodeData($code);
 
         // replace table for special characters
         $repstr = array("\0" => '', '&' => '&amp;', '<' => '&lt;', '>' => '&gt;');

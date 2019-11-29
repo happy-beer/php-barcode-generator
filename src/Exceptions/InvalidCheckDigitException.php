@@ -1,5 +1,5 @@
 <?php
 
-namespace Picqer\Barcode\Exceptions;
+namespace Happybeer\Barcode\Exceptions;
 
 class InvalidCheckDigitException extends BarcodeException {}

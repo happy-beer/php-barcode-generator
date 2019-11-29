@@ -1,8 +1,8 @@
 <?php
 
-namespace Picqer\Barcode;
+namespace Happybeer\Barcode;
 
-use Picqer\Barcode\Exceptions\BarcodeException;
+use Happybeer\Barcode\Exceptions\BarcodeException;
 
 class BarcodeGeneratorJPG extends BarcodeGenerator
 {
@@ -11,7 +11,6 @@ class BarcodeGeneratorJPG extends BarcodeGenerator
      * Return a JPG image representation of barcode (requires GD or Imagick library).
      *
      * @param string $code code to print
-     * @param string $type type of barcode:
      * @param int $widthFactor Width of a single bar element in pixels.
      * @param int $totalHeight Height of a single bar element in pixels.
      * @param array $color RGB (0-255) foreground color for bar elements (background is transparent).
@@ -19,9 +18,9 @@ class BarcodeGeneratorJPG extends BarcodeGenerator
      * @public
      * @throws BarcodeException
      */
-    public function getBarcode($code, $type, $widthFactor = 2, $totalHeight = 30, $color = array(0, 0, 0))
+    public function getBarcode($code, $widthFactor = 2, $totalHeight = 30, $color = array(0, 0, 0))
     {
-        $barcodeData = $this->getBarcodeData($code, $type);
+        $barcodeData = $this->getBarcodeData($code);
 
         // calculate image size
         $width = ($barcodeData['maxWidth'] * $widthFactor);

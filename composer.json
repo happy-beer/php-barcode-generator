@@ -24,7 +24,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Picqer\\Barcode\\": "src"
+            "Happybeer\\Barcode\\": "src"
         }
     }
 }

@@ -29,8 +29,6 @@
 
 namespace Happybeer\Barcode;
 
-use Happybeer\Barcode\Generators;
-
 abstract class BarcodeGenerator
 {
     protected $generator;
@@ -44,7 +42,6 @@ abstract class BarcodeGenerator
      * Get the barcode data
      *
      * @param string $code code to print
-     * @param string $type type of barcode
      * @return array barcode array
      * @public
      */

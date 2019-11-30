@@ -4,6 +4,7 @@
 namespace Happybeer\Barcode\Generators\EanExt;
 
 use Happybeer\Barcode\Generators\GeneratorGeneral;
+use Happybeer\Barcode\Exceptions\InvalidCheckDigitException;
 
 abstract  class GeneralGenerator extends GeneratorGeneral
 {

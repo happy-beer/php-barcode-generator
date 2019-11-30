@@ -4,6 +4,7 @@
 namespace Happybeer\Barcode\Generators;
 
 
+use Happybeer\Barcode\Exceptions\BarcodeException;
 use Happybeer\Barcode\Exceptions\InvalidFormatException;
 
 class ImbGenerator extends GeneratorGeneral

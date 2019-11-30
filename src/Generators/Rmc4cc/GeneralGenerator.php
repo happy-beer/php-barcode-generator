@@ -4,6 +4,8 @@
 namespace Happybeer\Barcode\Generators\Rmc4cc;
 
 
+use Happybeer\Barcode\Generators\GeneratorGeneral;
+
 abstract  class GeneralGenerator extends GeneratorGeneral
 {
 

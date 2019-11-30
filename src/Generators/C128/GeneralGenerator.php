@@ -5,6 +5,7 @@ namespace Happybeer\Barcode\Generators\C128;
 
 
 use Happybeer\Barcode\Exceptions\InvalidCharacterException;
+use Happybeer\Barcode\Exceptions\InvalidLengthException;
 use Happybeer\Barcode\Generators\GeneratorGeneral;
 
 abstract  class GeneralGenerator extends GeneratorGeneral

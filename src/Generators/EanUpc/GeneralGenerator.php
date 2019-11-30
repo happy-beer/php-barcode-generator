@@ -18,7 +18,7 @@ abstract  class GeneralGenerator extends GeneratorGeneral
      * UPC-A: Universal product code seen on almost all retail products in the USA and Canada
      * UPC-E: Short version of UPC symbol
      *
-     * @throws BarcodeException
+     * @throws Happybeer\Barcode\Generators\Exceptions\BarcodeException
      * @param $code (string) code to represent.
      * @param $len (string) barcode type: 6 = UPC-E, 8 = EAN8, 13 = EAN13, 12 = UPC-A
      * @return array barcode representation.

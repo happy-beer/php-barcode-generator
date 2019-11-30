@@ -3,9 +3,6 @@
 
 namespace Happybeer\Barcode\Generators;
 
-
-use Happybeer\Barcode\Exceptions\InvalidCharacterException;
-
 class PharmacodeGenerator extends GeneratorGeneral
 {
     /**

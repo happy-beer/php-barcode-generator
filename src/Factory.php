@@ -9,7 +9,12 @@ use \Happybeer\Barcode\Exceptions;
 class Factory
 {
 
-    public function getGenerator($type)
+    /**
+     * @param $type
+     * @return Generators\GeneratorGeneral
+     * @throws Exceptions\BarcodeException
+     */
+    public static function getGenerator($type)
     {
         switch (strtoupper($type)) {
             case BarcodeAllowTypes::TYPE_CODE_39: { // CODE 39 - ANSI MH10.8M-1983 - USD-3 - 3 of 9.
@@ -93,7 +98,7 @@ class Factory
                 break;
             }
             case BarcodeAllowTypes::TYPE_MSI_CHECKSUM: { // MSI + CHECKSUM (modulo 11)
-                return new Generators\Msi\KixGenerator();
+                return new Generators\Msi\CheckSumGenerator();
                 break;
             }
             case BarcodeAllowTypes::TYPE_POSTNET: { // POSTNET

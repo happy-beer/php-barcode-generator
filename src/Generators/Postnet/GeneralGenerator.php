@@ -3,6 +3,8 @@
 
 namespace Happybeer\Barcode\Generators\Postnet;
 
+use Happybeer\Barcode\Generators\GeneratorGeneral;
+
 abstract  class GeneralGenerator extends GeneratorGeneral
 {
 

@@ -3,7 +3,7 @@
 
 namespace Happybeer\Barcode\Generators\S25;
 
-class Generator extends S25GeneralBarcodeGenerator
+class Generator extends GeneralGenerator
 {
     function barcode($code)
     {

@@ -5,6 +5,7 @@ namespace Happybeer\Barcode\Generators\Msi;
 
 
 use Happybeer\Barcode\Exceptions\InvalidCharacterException;
+use Happybeer\Barcode\Generators\GeneratorGeneral;
 
 abstract  class GeneralGenerator extends GeneratorGeneral
 {

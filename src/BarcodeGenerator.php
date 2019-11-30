@@ -79,4 +79,6 @@ abstract class BarcodeGenerator
 
         return $newBarcodeArray;
     }
+
+    abstract function getBarcode($code, $widthFactor = 2, $totalHeight = 30, $color = 'black');
 }

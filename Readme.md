@@ -18,23 +18,22 @@ If you want to generate PNG or JPG images, you need the GD library or Imagick in
 Initiate the barcode generator for the output you want, then call the ->getBarcode() routine as many times as you want.
 
 ```php
-$generator = new Picqer\Barcode\BarcodeGeneratorHTML();
-echo $generator->getBarcode('081231723897', $generator::TYPE_CODE_128);
+$generator = new Happybeer\Barcode\BarcodeGeneratorHTML(Happybeer\Barcode\BarcodeAllowTypes::TYPE_CODE_128);
+echo $generator->getBarcode('081231723897', );
 ```
 
 The ->getBarcode() routine accepts the following:
 - $code Data for the barcode
-- $type Type of barcode, use the constants defined in the class
 - $widthFactor Width is based on the length of the data, with this factor you can make the barcode bars wider than default
 - $totalHeight The total height of the barcode
 - $color Hex code of the foreground color
 
 ## Image types
 ```php
-$generatorSVG = new Picqer\Barcode\BarcodeGeneratorSVG();
-$generatorPNG = new Picqer\Barcode\BarcodeGeneratorPNG();
-$generatorJPG = new Picqer\Barcode\BarcodeGeneratorJPG();
-$generatorHTML = new Picqer\Barcode\BarcodeGeneratorHTML();
+$generatorSVG = new Happybeer\Barcode\BarcodeGeneratorSVG($type);
+$generatorPNG = new Happybeer\Barcode\BarcodeGeneratorPNG($type);
+$generatorJPG = new Happybeer\Barcode\BarcodeGeneratorJPG($type);
+$generatorHTML = new Happybeer\Barcode\BarcodeGeneratorHTML($type);
 ```
 
 ## Accepted types
@@ -73,6 +72,6 @@ $generatorHTML = new Picqer\Barcode\BarcodeGeneratorHTML();
 Embedded PNG image in HTML:
 
 ```php
-$generator = new \Picqer\Barcode\BarcodeGeneratorPNG();
-echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode('081231723897', $generator::TYPE_CODE_128)) . '">';
+$generator = new \Happybeer\Barcode\BarcodeGeneratorPNG(Happybeer\Barcode\BarcodeAllowTypes::TYPE_CODE_128);
+echo '<img src="data:image/png;base64,' . base64_encode($generator->getBarcode('081231723897')) . '">';
 ```

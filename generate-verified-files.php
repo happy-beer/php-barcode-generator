@@ -1,7 +1,5 @@
 <?php
 
-require_once ('vendor/autoload.php');
-
 $generatorSVG = new \Happybeer\Barcode\BarcodeGeneratorSVG(\Happybeer\Barcode\BarcodeAllowTypes::TYPE_EAN_13);
 file_put_contents('tests/verified-files/081231723897-ean13.svg', $generatorSVG->getBarcode('081231723897'));
 

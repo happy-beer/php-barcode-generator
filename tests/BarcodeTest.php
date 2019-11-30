@@ -1,7 +1,5 @@
 <?php
 
-require_once ('vendor/autoload.php');
-
 use Happybeer\Barcode\BarcodeAllowTypes;
 
 class BarcodeTest extends PHPUnit_Framework_TestCase

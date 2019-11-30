@@ -5,13 +5,6 @@ It creates SVG, PNG, JPG and HTML images, from the most used 1D barcode standard
 
 *The codebase is largely from the [TCPDF barcode generator](https://github.com/tecnickcom/TCPDF) by Nicola Asuni. This code is therefor licensed under LGPLv3. It is still a bit of a mess, bit I will clean it in the future. I do not expect the interface of this class will change during the clean ups.*
 
-## Installation
-Install through [composer](https://getcomposer.org/doc/00-intro.md):
-
-```
-composer require picqer/php-barcode-generator
-```
-
 If you want to generate PNG or JPG images, you need the GD library or Imagick installed on your system as well.
 
 ## Usage
@@ -19,7 +12,7 @@ Initiate the barcode generator for the output you want, then call the ->getBarco
 
 ```php
 $generator = new Happybeer\Barcode\BarcodeGeneratorHTML(Happybeer\Barcode\BarcodeAllowTypes::TYPE_CODE_128);
-echo $generator->getBarcode('081231723897', );
+echo $generator->getBarcode('081231723897');
 ```
 
 The ->getBarcode() routine accepts the following:
